@@ -1,0 +1,111 @@
+prompt 1:
+
+I am developing a character-based graphics editor in C that uses only `*` and `_` symbols for drawing. The editor should support shapes such as rectangles, lines, triangles, and circles. It should allow users to create new shapes, remove previously drawn shapes, edit existing shapes, and display the current drawing on the screen. The canvas should be stored using a two-dimensional character array. Could you explain the complete project requirements and what features are expected?
+
+prompt 2:
+
+```c
+#include<stdio.h>
+
+//void remove_shape();
+//void add_shape();
+//void update_shape();
+
+int main()
+{
+    char canvas[40][40];
+    int row,col;
+
+    for(row=0;row<40;row++)
+    {
+        for(col=0;col<40;col++)
+        {
+            canvas[row][col]='_';
+        }
+    }
+
+    for(row=0;row<40;row++)
+    {
+        for(col=0;col<40;col++)
+        {
+            printf("%s",canvas[row][col]);
+        }
+    }
+
+    return 0;
+}
+```
+
+I am trying to display a 40×40 character canvas, but the program crashes with a segmentation fault. What is causing this issue?
+
+prompt 3:
+
+If my drawing area consists of 40 rows and 80 columns, what would be suitable default dimensions for circles, rectangles, triangles, and lines so that they fit properly within the canvas?
+
+prompt 4:
+
+While compiling my project, I receive the following error:
+
+```text
+project.c: In function 'add_shape':
+project.c:52:7: error: a label can only be part of a statement and a declaration is not a statement
+int z,i,j;
+```
+
+Can you explain the reason for this error and how it can be fixed?
+
+prompt 5:
+
+When implementing a circle in my graphics editor, the user provides the coordinates corresponding to the uppermost point of the circle. What is the best approach for drawing it? Should I calculate the center and radius first and then use the circle equation?
+
+prompt 6:
+
+I am using a loop that may execute a very large number of times while waiting for valid user input. Once the required input is entered, I want the loop to stop immediately and allow the user to start over if needed. Should I use a `break` statement, a `while` loop, or some other approach?
+
+prompt 7:
+
+My editor includes a feature for removing shapes that have already been drawn. What is an effective method for identifying and locating an existing shape before deleting it from the canvas?
+
+prompt 8:
+
+The project specification includes a "modify shape" option. Does this only mean changing the dimensions of a shape, or should it also support repositioning the shape and updating other attributes?
+
+prompt 9:
+
+How should my graphics editor behave if two or more shapes occupy the same region of the canvas? What are the common ways of handling overlapping shapes?
+
+prompt 10:
+
+Before drawing a shape, how can I verify that all of its coordinates remain within the valid limits of the canvas and prevent out-of-bounds errors?
+
+prompt 11:
+
+```c
+
+```
+
+Please review the above program and identify any logical errors that may cause incorrect behavior even if the program compiles successfully.
+
+prompt 12:
+
+```c
+
+```
+
+Apart from logical issues, inspect the code for compilation problems, runtime errors, invalid memory access, boundary violations, or any other implementation mistakes.
+
+prompt 13:
+
+```c
+
+```
+
+Analyze the program and indicate the exact line numbers where errors, warnings, or problematic statements occur. Explain the reason behind each issue and suggest possible corrections.
+
+prompt 14:
+
+```c
+
+```
+
+Perform a comprehensive review of the program by considering all possible user inputs, execution paths, and edge cases. Identify logical flaws, unexpected behavior, and situations that may result in incorrect output or program crashes.
